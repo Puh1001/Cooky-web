@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập/Đăng ký</title>
+    <link rel="stylesheet" href="monmoi.css">
+    <link rel="stylesheet" href="dangkidangnhap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyAP_86hOYUoGyvK2ex-DgvSMeYN7ISu7Hg",
+    authDomain: "cookpad-42cff.firebaseapp.com",
+    projectId: "cookpad-42cff",
+    storageBucket: "cookpad-42cff.appspot.com",
+    messagingSenderId: "922055544475",
+    appId: "1:922055544475:web:cf8f06cdc6e693d0c9003e",
+    measurementId: "G-MJKNZTD5HR"
+  };
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+    </script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="welcome-message">
+        <h1 id="cook1">Nấu ăn là nghệ thuật, hãy để trái tim bạn làm bếp trưởng!</h1>
+    </div>
+
+    <div class="container">
+        <button id="login-btn">Đã có tài khoản</button>
+        <button id="register-btn">Chưa có tài khoản</button>
+
+        <div id="login-form" class="form hidden">
+            <h2>Đăng nhập</h2>
+            <form>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Mật khẩu" required>
+                <button id="dndk" type="submit">Đăng nhập</button>
+                
+            </form>
+        </div>
+
+        <div id="register-form" class="form hidden">
+            <h2>Đăng ký</h2>
+            <form>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Mật khẩu" required>
+                <button id="dndk" type="submit">Đăng ký</button>
+                
+            </form>
+        </div>
+    </div>
+    <div class="welcome-message">
+        <h1 id="cook2">Welcome to Cookuu</h1>
+    </div>
+
+
+    <script type="module">
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+
+        const auth = getAuth();
+
+        document.getElementById('register-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            createUserWithEmailAndPassword(auth, email, password).then(() => {
+                window.location.href = 'monmoi.html';
+            }).catch((error) => {
+                console.error("Error signing up:", error);
+            });
+        });
+
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            signInWithEmailAndPassword(auth, email, password).then(() => {
+                window.location.href = 'monmoi.html';
+            }).catch((error) => {
+                console.error("Error logging in:", error);
+            });
+        });
+    </script>
+    <script src="dangkidangnhap.js"></script>
+
+</body>
+
+</html>
