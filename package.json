@@ -1,0 +1,14 @@
+{
+  "name": "cooky-web",
+  "version": "1.0.0",
+  "description": "Cookyweb",
+  "main": "dangkidangnhap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "puh",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
