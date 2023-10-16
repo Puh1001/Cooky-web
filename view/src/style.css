@@ -388,13 +388,13 @@ footer {
 }
 
 /* contact us */
-.menu-container {
+.popup-container {
     bottom: 20px;
     right: 20px;
     position: fixed;
 }
 
-.menu-toggle-btn {
+.popup-toggle-btn {
     height: 56px;
     width: 56px;
     bottom: 0;
@@ -410,17 +410,17 @@ footer {
     cursor: pointer;
 }
 
-.menu-toggle-btn i {
+.popup-toggle-btn i {
     font-size: 2rem;
     color: #eeeeee;
     transition: 0.5s;
 }
 
-.menu-toggle-btn.effect i {
+.popup-toggle-btn.effect i {
     transform: rotate(135deg);
 }
 
-.menu-list {
+.popup-list {
     list-style: none;
     bottom: 0;
     right: 0;
@@ -428,7 +428,7 @@ footer {
     z-index: 1;
 }
 
-.menu-list .menu-item {
+.popup-list .popup-item {
     height: 2.3rem;
     width: 2.3rem;
     bottom: 0.25rem;
@@ -442,32 +442,32 @@ footer {
     transition: 0.5s;
 }
 
-.menu-list .menu-item a {
+.popup-list .popup-item a {
     text-decoration: none;
     color: #eeeeee;
 }
 
-.menu-list .menu-item:hover {
+.popup-list .popup-item:hover {
     background-color: #8864fd;
 }
 
-.menu-list.effect .menu-item {
+.popup-list.effect .popup-item {
     box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.menu-list.effect .menu-item:nth-of-type(1) {
+.popup-list.effect .popup-item:nth-of-type(1) {
     bottom: 4.25rem;
     right: 0.5rem;
     transition-delay: 0.2s;
 }
 
-.menu-list.effect .menu-item:nth-of-type(2) {
+.popup-list.effect .popup-item:nth-of-type(2) {
     bottom: 3.5rem;
     right: 3.5rem;
     transition-delay: 0.1s;
 }
 
-.menu-list.effect .menu-item:nth-of-type(3) {
+.popup-list.effect .popup-item:nth-of-type(3) {
     bottom: 0.5rem;
     right: 4.25rem;
 }

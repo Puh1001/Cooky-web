@@ -38,9 +38,9 @@ $(document).ready(function () {
 
 // contract us popup
 $(document).ready(function () {
-  $('.menu-toggle-btn').click(function () {
-    $('.menu-toggle-btn').toggleClass("effect");
-    $('.menu-list').toggleClass("effect");
+  $('.popup-toggle-btn').click(function () {
+    $('.popup-toggle-btn').toggleClass("effect");
+    $('.popup-list').toggleClass("effect");
   });
 });
 // get suggest-bar from suggest.html
