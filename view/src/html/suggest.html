@@ -12,8 +12,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../css/suggest.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -23,14 +21,13 @@
             <div class="logo">
                 <img src="../../../icons/PuhChef_ba-style@nulla.top.png" width="300px" alt="">
             </div>
-            <div class="search-bar px-rg">
+            <div class="search-bar px-rg mg-py-xs">
                 <form action="" class="search-bar-form flex flex-nowrap border round-full px-rg py-xs">
                     <button type="submit" class="no-background no-border poiter">
-                        <img src="../../icons/search.png" alt="" width="30px">
                         <img src="../../../icons/search.png" alt="" width="30px">
                     </button>
                     <input type="text" name="search" id="search" placeholder=" Gõ tên các nguyên liệu"
-                        class="no-border outline-none w-full mg-px-rg">
+                        class="no-border outline-none w-full mg-px-rg no-background">
                 </form>
                 <div class="search-option py-xs px-rg w-full shadow">
                     <a href="../../xây dựng web/cap-nhat.html" class="flex link center border-bottom py-xs">
@@ -44,7 +41,27 @@
                         <p>Tìm bạn...</p>
                     </a>
                 </div>
+                <div class="suggest-seacrch mg-py-xs">
+                    <h4>Món ăn tìm kiếm phổ biến hôm nay</h4>
+                    <div class="suggest-ct flex space-bw py-xs ">
+                        <a href="">Ức gà</a>
+                        <a href="">bánh mì</a>
+                        <a href="">canh chua</a>
+                        <a href="">thịt kho tiêu</a>
+                        <a href="">trà sữa</a>
+                        <a href="">nấm kim châm</a>
+                    </div>
+                    <button type="button">Chuyên mục</button>
+                </div>
             </div>
+        </div>
+        <div class="new-food py-xs">
+            <a href="" class="flex t-center">
+                <div class="border round-full flex py-xs px-rg">
+                    <i class="fa-solid fa-plus-circle "></i>
+                    <p class="">Viết món mới</p>
+                </div>
+            </a>
         </div>
         <div class="menu">
             <ul>
@@ -72,7 +89,6 @@
                         Cooky</a>
                 </div>
             </div>
-
             <div class="mon-an">
                 <a href="#" class="menu" id="menu-thit">
                     <img class="anh-dai-dien"
