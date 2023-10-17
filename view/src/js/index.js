@@ -76,3 +76,12 @@ function loadAndAddJS(url) {
   script.async = true;
   document.body.appendChild(script);
 }
+// click menu-item$(document).ready(function(){
+    $('.menu-item').click(function(){
+      $('.menu-item .icon, .menu-item p').css('color', ''); 
+      $(this).find('.icon, p').css('color', 'orange');
+  });
+  $('.menu-item').blur(function(){
+      $(this).find('.icon, p').css('color', '');
+  });
+
