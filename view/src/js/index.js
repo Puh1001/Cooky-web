@@ -46,7 +46,7 @@ $(document).ready(function () {
 // get suggest-bar from suggest.html
 document.addEventListener('DOMContentLoaded', function() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', '../../xây dựng web/cap-nhat.html', true);
+  xhr.open('GET', 'suggest.html', true);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var responseText = xhr.responseText;
@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
       var targetElement = tempDiv.querySelector('.suggest-bar');
       document.querySelector('.suggest-bar').innerHTML = targetElement.innerHTML;
       
-      loadAndAddCSS('../../xây dựng web/main.css');
-      loadAndAddJS('../../xây dựng web/main.js');
+      loadAndAddCSS('../css/suggest.css');
+      loadAndAddJS('../js/suggest.js');
     }
   };
   xhr.send();
