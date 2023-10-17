@@ -11,10 +11,6 @@ body {
     background-color: #f8f6f2;
 }
 
-header {
-    background-color: white;
-}
-
 .wrapper {
     width: 80vw;
     margin: 0 auto;
@@ -136,11 +132,16 @@ header {
 .w-100 {
     width: 100vh;
 }
-
+/* header */
 header {
+    background-color: white;
     position: relative;
     padding: 0;
     margin: 0;
+}
+.menu > ul {
+    list-style-position: inside;
+    list-style: none;
 }
 
 .icon {

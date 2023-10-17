@@ -544,6 +544,7 @@ footer{
 .search-bar {
     position: relative;
 }
+
 .main-head-ct {
     display: flex;
     flex-direction: column;
