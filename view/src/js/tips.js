@@ -41,7 +41,7 @@ function addStep() {
     step.appendChild(deleteBtn);
     container.appendChild(step);
 }
-// load header
+// load header, footer
 document.addEventListener('DOMContentLoaded', function() {
     loadComponent('header'); 
   });

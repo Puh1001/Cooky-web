@@ -111,3 +111,10 @@ votayButtons.forEach((button, index) => {
         votayCountElement.textContent = votayCount;
     });
 });
+// load header, footer
+document.addEventListener('DOMContentLoaded', function() {
+    loadComponent('header'); 
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    loadComponent('footer'); 
+  });

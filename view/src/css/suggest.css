@@ -11,9 +11,8 @@ body {
 }
 
 .wrapper {
-    max-width: 1024px;
-    margin: 0px auto;
-    position: relative;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 ul {
@@ -489,4 +488,9 @@ h2 {
 
 .thoi-gian {
     margin: 0px;
+}
+/* footer */
+footer{
+    display: flex;
+    justify-content: center;
 }
