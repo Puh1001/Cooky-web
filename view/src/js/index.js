@@ -77,11 +77,27 @@ function loadAndAddJS(url) {
   document.body.appendChild(script);
 }
 // click menu-item$(document).ready(function(){
+  $(document).ready(function(){
+    // Khi tải trang, kiểm tra xem có mục nào được lưu trong localStorage không
+    var selectedItem = localStorage.getItem('selectedItem');
+    if (selectedItem) {
+        $('#' + selectedItem).find('.icon, p').css('color', 'orange');
+    }
+
     $('.menu-item').click(function(){
-      $('.menu-item .icon, .menu-item p').css('color', ''); 
-      $(this).find('.icon, p').css('color', 'orange');
-  });
-  $('.menu-item').blur(function(){
-      $(this).find('.icon, p').css('color', '');
-  });
+        $('.menu-item .icon, .menu-item p').css('color', ''); // Reset màu sắc cho tất cả các mục
+        $(this).find('.icon, p').css('color', 'orange'); // Đặt màu sắc cho mục được nhấp
+
+        // Lưu id của mục được chọn vào localStorage
+        localStorage.setItem('selectedItem', $(this).attr('id'));
+    });
+
+    // Kiểm tra xem trang hiện tại có phải là trang chủ không
+    if (window.location.pathname.endsWith('index.html')) {
+        // Nếu đúng, xóa mục đã chọn từ localStorage và reset màu sắc
+        localStorage.removeItem('selectedItem');
+        $('.menu-item .icon, .menu-item p').css('color', '');
+    }
+});
+
 
