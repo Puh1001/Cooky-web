@@ -75,4 +75,5 @@ li > a {
 }
 li > a > p {
     margin-bottom: -.6rem;
+    padding-left: .5rem;
 }
