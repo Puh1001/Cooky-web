@@ -9,21 +9,21 @@
     justify-content: center;
     align-items: center;
 }
-.py-xs {
+.py-search-xs {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-.px-rg {
+.px-search-rg {
     padding-right: 1rem;
     padding-left: 1rem;
 }
-.mg-px-rg {
+.mg-px-search-rg {
     margin-right: 1rem;
     margin-left: 1rem;
 }
 
-.mg-py-xs {
+.mg-py-search-xs {
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
@@ -40,7 +40,7 @@
     justify-content: space-between;
 }
 .border {
-    border: 1px solid black;
+    border: 1px-search solid black;
 }
 .round-full {
     border-radius: 9999px;
@@ -72,4 +72,7 @@ a {
 li > a {
     padding-right: 1rem;
     padding-left: 1rem;
+}
+li > a > p {
+    margin-bottom: -.6rem;
 }
