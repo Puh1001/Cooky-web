@@ -9,7 +9,7 @@ function loadComponent(component) {
       var targetElement = tempDiv.querySelector(component);
       document.querySelector(component).innerHTML = targetElement.innerHTML;
       
-      loadAndAddCSS('../css/style.css');
+      loadAndAddCSS('../css/index.css');
       loadAndAddJS('../js/index.js');
     }
   };
