@@ -21,7 +21,6 @@ ul {
     padding: 0px;
 }
 
-
 a {
     text-decoration: none;
     color: black;
@@ -493,4 +492,49 @@ h2 {
 footer{
     display: flex;
     justify-content: center;
+}
+/* Add css by puh */
+.flex {
+    display: flex;
+}
+.center {
+    justify-content: center;
+}
+.t-center{
+    justify-content: center;
+    align-items: center;
+}
+.py-xs {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.px-rg {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.mg-px-rg {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.mg-py-xs {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.mg-center {
+    margin: 0 auto;
+}
+.pd-center {
+    padding: 0 auto;
+}
+/* search-bar */
+.search-bar {
+    position: relative;
+}
+.main-head-ct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
