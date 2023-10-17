@@ -63,18 +63,41 @@ li > a > p {
     margin-bottom: -.6rem;
     padding-left: .5rem;
 }
-
-/* search-bar */
-.search-bar {
-    position: relative;
+/* content */
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 }
 
-.main-head-ct {
-    display: flex;
+.notification-item {
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 10px;
+}
+
+.page-title h1 {
+    font-size: 24px;
+}
+
+.message-info {
+    font-weight: bold;
+}
+
+.label {
+    background-color: #999;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.flex-col {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-.suggest-ct > a {
-    color: blue;
+a {
+    color:#4a4a4a;
+}
+.time {
+    font-size: 10px;
 }
