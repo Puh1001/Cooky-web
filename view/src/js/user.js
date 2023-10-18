@@ -1,28 +1,27 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+$(document).ready(function() {
+  const $tabs = $(".tab-item");
+  const $panes = $(".tab-pane");
+  const $tabActive = $(".tab-item.active");
+  const $line = $(".tabs .line");
 
-const tabs = $$(".tab-item");
-const panes = $$(".tab-pane");
+  requestIdleCallback(function () {
+      $line.css("left", $tabActive.position().left + "px");
+      $line.css("width", $tabActive.outerWidth() + "px");
+  });
 
-const tabActive = $(".tab-item.active");
-const line = $(".tabs .line");
+  $tabs.each(function(index) {
+      const $tab = $(this);
+      const $pane = $panes.eq(index);
 
-requestIdleCallback(function () {
-  line.style.left = tabActive.offsetLeft + "px";
-  line.style.width = tabActive.offsetWidth + "px";
-});
+      $tab.on("click", function() {
+          $(".tab-item.active").removeClass("active");
+          $(".tab-pane.active").removeClass("active");
 
-tabs.forEach((tab, index) => {
-  const pane = panes[index];
+          $line.css("left", $tab.position().left + "px");
+          $line.css("width", $tab.outerWidth() + "px");
 
-  tab.onclick = function () {
-    $(".tab-item.active").classList.remove("active");
-    $(".tab-pane.active").classList.remove("active");
-
-    line.style.left = this.offsetLeft + "px";
-    line.style.width = this.offsetWidth + "px";
-
-    this.classList.add("active");
-    pane.classList.add("active");
-  };
+          $tab.addClass("active");
+          $pane.addClass("active");
+      });
+  });
 });

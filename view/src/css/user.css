@@ -281,15 +281,15 @@ li > a > p {
     width: 0;
     height: 6px;
     border-radius: 15px;
-    background-color: #c23564;
+    background-color: #ff9933;
     transition: all 0.2s ease;
   }
   .tab-item {
     min-width: 80px;
     padding: 16px 20px 11px 20px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
-    color: #c23564;
+    color: #ff9933;
     background-color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
