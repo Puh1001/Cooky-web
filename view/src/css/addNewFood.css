@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+ul {
+    list-style: none;
+}
+li {
+    display: flex;
+    align-items: center;    
+}   
+li>a {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+li>a>p {
+    margin-bottom: -.6rem;
+    padding-left: .5rem;
+}

@@ -1,0 +1,129 @@
+.backgroundtong{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../img/anhnen4.jpg'); 
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3); 
+    font-family: Arial, sans-serif;
+    color: #4a4a4a; 
+}
+
+.login-container {
+    margin-top:50px;
+    width: 300px;
+    padding: 20px;
+    z-index: 1;
+    text-align: center;
+    background-color: rgb(248,246,242);
+    border-radius: 5px;
+    
+}
+.cden1{
+    text-decoration: none;
+    color: #4a4a4a;
+    font-family: Arial, sans-serif;
+}
+.cden2{
+    color: #4a4a4a;
+    font-family: Arial, sans-serif;
+}
+.login-canngang{
+    display: flex;
+    justify-content: space-between;
+}
+.login-nut{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.maufb{
+    background-color: rgb(63, 63, 255);
+    color: white;
+}
+.maugg{
+    background-color: white;
+    color: black;
+}
+.mauap{
+    background-color: black;
+    color: white;
+}
+.mauem{
+    background-color: white;
+}
+.mauem2{
+    background-color: rgb(255, 162, 40);
+    color: white;
+
+}
+.xyz{
+    margin-bottom: 10px;
+}
+#dkInput:focus{
+    outline: none;
+    border: none;
+
+}
+textarea{
+    border: none;
+}
+
+.border{
+    display: flex;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.textaracan{
+    padding: 15px 10px ;
+    background-color: white;
+}
+#dkInput{
+    padding-top: 13px;
+    font-size: 15px;
+    resize: none;/* ẩn dấu thu to nhỏ của thẻ <textarea> */
+    
+}
+h1{
+    font-size: 28px;
+    font-weight: bold;
+}
+.ttk{
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 162, 40);
+    text-decoration: none;
+    color: white;
+}
+.login-canngang2{
+    display: flex;
+}
+.check{
+    font-size: 11px;
+    color: rgb(152, 152, 152);
+}
+.mau{
+    color: #4a4a4a;
+}
+.bold{
+    font-weight: bold;
+}
+.ttk:hover{
+    background-color: rgb(180, 117, 36);
+}
+.ttk:focus{
+    background-color: rgb(131, 85, 25);
+}
+.mauem2:hover{
+    background-color: rgb(180, 117, 36);
+}
+.mauem2:focus{
+    background-color: rgb(131, 85, 25);
+}
+
+
+
+
