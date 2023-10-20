@@ -1,0 +1,162 @@
+body {
+    background-color: #f8f6f2;
+}
+
+.post {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+}
+
+.post-image img {
+    width: 100%;
+}
+
+.post-details {
+    padding: 10px 0;
+}
+
+.comment {
+    background-color: white;
+    border: 1px solid;
+    padding: 10px;
+    align-items: start;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    margin: 0px;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #aaa;
+    padding: 0px;
+    margin: 0px;
+}
+
+.comment-text {
+    font-size: 15px;
+}
+
+.comment-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.can-giua-ten {
+    display: flex;
+    align-items: center;
+    z-index: 998;
+    margin-left: 20px;
+}
+
+.anh-dai-dien {
+    border-radius: 50%;
+    margin-right: 10px;
+    z-index: 998;
+}
+
+a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+.thong-tin-nguoi-cmt {
+    display: flex;
+    align-items: center;
+}
+
+.time-cmt {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.like {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #cececd;
+    display: flex;
+    justify-content: center;
+    padding: 0px 5px 0px 5px;
+    margin-right: 5px;
+}
+
+#likeButton,
+#timButton,
+#votayButton {
+    padding: 0px;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+.dis-flex {
+    display: flex;
+}
+
+.khung-comment {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.comment,
+#commentInput,
+#commentButton {
+    border: none !important;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.ten-nguoi-icon {
+    margin: 0px;
+    color: #939290;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .khung-comment {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    .post {
+        width: 95%;
+    }
+
+    .khung-comment {
+        width: 80%;
+    }
+}

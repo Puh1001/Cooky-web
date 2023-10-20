@@ -1,75 +1,61 @@
-
+// click đầu trang web
 $(document).ready(function () {
-    // Ẩn tất cả các .tab và .tabb
     $('.tab').removeClass('active');
     $('.tabb').hide();
     $('.mon').hide();
 
-    // Sự kiện click cho .menu trong .mon-an
     $('.mon-an .menu').click(function (e) {
         e.preventDefault();
 
-        // Ẩn tất cả các .tab và .tabb
         $('.tab').removeClass('active');
         $('.tabb').hide();
 
-        // Hiển thị .tab và .tabb tương ứng với .menu được nhấn
         const menuId = $(this).attr('id').replace('menu-', '');
         $('#tab-' + menuId).addClass('active');
         $('.' + menuId).show();
 
-        // Mặc định hiển thị .mon-tat-ca
         $('.mon').hide();
         $('.mon-tat-ca').show();
 
-        // Đặt màu nền cho menu được chọn
         $('.mon-an .menu').css('background-color', '');
         $(this).css('background-color', '#f9e3c7');
 
-        // Kích hoạt menu tương ứng trong .tab
         const menuItem = $('#tab-' + menuId + ' .menu.active');
         if (menuItem.length) {
             menuItem.click();
         }
 
-        // Tự động click vào #menu-active
         console.log("Đang thử click vào #menu-active");
         $('#menu-active').click();
         console.log("Đang thử click vào #menu-active");
         $('#menu-active').css('border-bottom', '2px solid orange');
     });
 
-    // Sự kiện click cho .menu trong .tab
     $('.tab .menu').click(function (e) {
         e.preventDefault();
 
-        // Xóa class 'active' và 'active-border' khỏi tất cả các mục .menu
         $('.tab .menu').removeClass('active');
-        $('.tab .menu').css('border-bottom', '');  // Loại bỏ border-bottom từ tất cả các mục
+        $('.tab .menu').css('border-bottom', '');
 
-        // Thêm class 'active' cho mục .menu được nhấn
         $(this).addClass('active');
-        $(this).css('border-bottom', '2px solid orange');  // Thêm border-bottom màu cam
+        $(this).css('border-bottom', '2px solid orange');
 
-        // Nếu mục được nhấn là #menu-active, đặt lại border-bottom cho nó
         if ($(this).attr('id') === 'menu-active') {
             $(this).css('border-bottom', '2px solid orange');
         }
 
         let index = $(this).index();
 
-        $('.mon').hide(); // Ẩn tất cả các .mon
+        $('.mon').hide();
 
         if (index === 0) {
-            $('.mon-tat-ca').show(); // Hiển thị .mon-tat-ca khi "Tất cả" được chọn
+            $('.mon-tat-ca').show();
         } else {
-            $('.mon' + index).show(); // Hiển thị .mon tương ứng dựa trên chỉ số
+            $('.mon' + index).show();
         }
     });
-    // Tự động click vào #menu-thit và #menu-active khi trang web tải xong
     $('#menu-thit').click();
 });
-
 
 //like
 const likeButtons = document.querySelectorAll(".likeButton");
@@ -142,4 +128,79 @@ $(document).ready(function () {
             isOptionsVisible = false;
         }
     });
+});
+$(document).ready(function () {
+    $('.menu-the-i').hide();
+
+    $('.fa-ellipsis').on('click', function (e) {
+        e.stopPropagation();
+        var menu = $(this).closest('.thong-tin-nguoi-dung').find('.menu-the-i');
+        $('.menu-the-i').not(menu).hide();
+        menu.toggle();
+    });
+
+    $(document).on('click', function () {
+        $('.menu-the-i').hide();
+    });
+});
+
+//shear
+const shareButton = document.getElementById("shareButton");
+const subMenuShear = document.querySelector(".sub-menu-shear ul");
+
+shareButton.addEventListener("click", () => {
+    if (subMenuShear) {
+        const isSubMenuVisible = subMenuShear.style.display === "block";
+        if (isSubMenuVisible) {
+            subMenuShear.style.display = "none";
+        } else {
+            subMenuShear.style.display = "block";
+        }
+    }
+});
+
+//lưu món
+const saveButton = document.getElementById("saveButton");
+
+saveButton.addEventListener("click", () => {
+    alert("Món ăn đã được lưu!");
+});
+function openModal() {
+    var modal = document.getElementById("myModal");
+    var img = document.querySelector(".img-1");
+    var modalImg = document.getElementById("img01");
+
+    modal.style.display = "block";
+    modalImg.src = img.src;
+}
+
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+document.getElementById("printButton").addEventListener("click", function () {
+    window.print();
+});
+
+// Chọn nút Gửi Cooksnap và input file
+const cooksnapButton = document.querySelector('.cooksnap-button');
+const imageInput = document.getElementById('imageInput');
+cooksnapButton.addEventListener('click', () => {
+    imageInput.click();
+});
+
+// hieen thị menu con
+const moreOptions = document.querySelector('.more-options');
+const reportText = document.querySelector('.reportText');
+
+let isReportTextVisible = false; // Biến theo dõi trạng thái hiển thị
+
+moreOptions.addEventListener('click', () => {
+    if (isReportTextVisible) {
+        reportText.style.display = 'none';
+    } else {
+        reportText.style.display = 'block';
+    }
+    isReportTextVisible = !isReportTextVisible;
 });

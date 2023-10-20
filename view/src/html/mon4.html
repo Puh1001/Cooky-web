@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/monSuggest.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="x-icon" href="../../../icons/PuhChef_ba-style@nulla.top.png">
+    <title>Cooky - Nấu ăn vui vẻ mỗi ngày!</title>
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <header></header>
+    <main class="wrapper">
+        <div class="khungtrong">
+            <div class="img-tieude" onclick="openModal()">
+                <img class="img-1"
+                    src="https://img-global.cpcdn.com/recipes/6df49fcfe49cdd63/1360x964cq70/canh-c%E1%BA%A3i-cuc-n%E1%BA%A5u-tom-kho-recipe-main-photo.webp"
+                    alt="">
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="img01">
+            </div>
+
+            <div class="tenmon">
+                <h1>Canh Cải Cúc Nấu Tôm Khô</h1>
+            </div>
+            <div class="tieude">
+                <a style="padding: 0px;" href="">
+                    <div class=" can-giua-ten">
+                        <img class="anh-dai-dien" width="30px" height="30px"
+                            src="https://img-global.cpcdn.com/users/737bdf9adfe1558c/40x40cq50/avatar.webp" alt="">
+                        <p class="thoi-gian">Trần Hà Linh <br> <span style="font-size: 13px;"><i
+                                    class="fa-solid fa-location-dot"></i> Nha Trang</span></p>
+                    </div>
+                </a>
+                <p class="margin-0">Báo <span style="color: orangered;">#aFamily #bepvang #comnha #bepcomnha</span><br>
+                    Made by <span style="color: orangered;">@RoseTruong</span></p>
+            </div>
+
+            <div class="nguyenlieu">
+                <h2 class="nl">Nguyên liệu</h2>
+                <p><i class="fa-regular fa-clock"></i> 30 phút &nbsp; 🍴 9 người</p>
+                <ul style=" color: #939290;">
+                    <li class="nguyen-lieu-can-dung">20 g tôm khô</li>
+                    <li class="nguyen-lieu-can-dung">300 g rau cải cúc</li>
+                    <li class="nguyen-lieu-can-dung">1/2 muỗng cafe mắm</li>
+                    <li class="nguyen-lieu-can-dung">muối</li>
+                    <li class="">bột ngọt (tuỳ sở thích)</li>
+                </ul>
+            </div>
+
+            <div class="congthuc">
+                <h2>Hướng dẫn nấu nướng</h2>
+
+                <div class="buoc">
+                    <h3>Bước 1</h3>
+                    <p>Tôm khô ngâm nước ấm cho nở, tầm 15 phút. Rau cải cúc nhặt rửa sạch, ngâm nước muối pha loãng 15
+                        phút. Rồi rửa lại cho sạch sẽ để ráo. Cắt miếng vừa ăn.</p>
+                </div>
+
+                <div class="buoc">
+                    <h3>Bước 2</h3>
+                    <p>Nấu sôi nước cho tôm khô vào. Khi sôi lên vớt thật sạch bọt nếu có, khi tôm đã mềm thì cho ít
+                        muối,
+                        rồi thả rau cải cúc (còn gọi là rau tần ô) vào. Nêm nếm lại cho vừa khẩu vị của gia đình. Nếu
+                        bạn
+                        thích béo và kiểu gia vị có thể làm nóng nồi, phi 1 củ hành tím và xíu dầu ăn, xào tôm rồi nấu
+                        lên.
+                    </p>
+                </div>
+
+                <div class="buoc">
+                    <h3>Bước 3</h3>
+                    <p>Khi tôm chín mềm thì cho rau vào, nêm lại theo khẩu vị là được.</p>
+                </div>
+            </div>
+
+
+            <div class="phanung">
+                <h2 class="pu"><i class="fa-regular fa-heart"></i>&nbsp;Phản ứng</h2>
+                <p class="ten-nguoi-icon">Lena K và các bạn khác đã thích</p>
+                <div class="icon"><!-- Like -->
+                    <div class="like">
+                        <button id="likeButton">👍</button>
+                        <span id="likeCount">0</span>
+                    </div>
+                    <div class="like">
+                        <button id="timButton">❤️</button>
+                        <span id="timCount">0</span>
+                    </div>
+                    <div class="like">
+                        <button id="votayButton">👏</button>
+                        <span id="votayCount">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cooksnap">
+                <h2 class="tieu-de-ban-dang-them-mon-gi" style="margin-bottom: 20px;"><i
+                        class="fa fa-camera-retro"></i>&nbsp;Cooksnap Mới Nhất</h2>
+                <p>Bạn đã làm theo món này phải không? Hãy chia sẻ hình món bạn đã nấu nhé!</p>
+                <div class="flex-column">
+                    <button class="btn-cooksnap">Gửi Cooksnap</button>
+                    <a href="#" class="learn-more">Tìm hiểu thêm về Cooksnap</a>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comments-section">
+                    <div class="comments-header">
+                        <h2><i class="fa-regular fa-message"></i>&nbsp;Bình luận <span
+                                style="color: #939290;">(3)</span>
+                        </h2>
+                        <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="dis-flex">
+                        <img class="anh-dai-dien"
+                            src="https://img-global.cpcdn.com/users/b2886aee6a4c9e9d/32x32cq50/avatar.webp"
+                            alt="User profile picture" width="30px" height="30px" class="comment-avatar">
+                        <div class="" style="margin: 0px;">
+                            <h5>Swaminathan <span style="color: #939290;">@2808185</span></h5>
+                            <p class="time-comment">4 tháng trước</p>
+                            <p style="margin: 0px; color:#4a4a4a">Yummy dear</p>
+                            <div class="icon" style="margin-top: 15px;">
+                                <div class="like">
+                                    <button id="likeButton">👍</button>
+                                    <span id="likeCount">0</span>
+                                </div>
+                                <div class="like">
+                                    <button id="timButton">❤️</button>
+                                    <span id="timCount">0</span>
+                                </div>
+                                <div class="like">
+                                    <button id="votayButton">👏</button>
+                                    <span id="votayCount">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dis-flex" style="margin-top: 20px; margin-bottom:20px;">
+                        <img class="anh-dai-dien"
+                            src="https://img-global.cpcdn.com/users/577ddfd56d9a1993/32x32cq50/avatar.webp"
+                            alt="Current user avatar" class="add-comment-avatar">
+                        <div class="khung-comment">
+                            <input type="text" id="commentInput" placeholder="Bình luận...">
+                            <button id="commentButton"><i class="fa-regular fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    <div id="commentList"></div>
+                </div>
+            </div>
+
+            <div class="vietboi">
+                <h2 class="tieu-de-ban-dang-them-mon-gi" style="margin-bottom: 20px;">&nbsp;Viết bởi</h2>
+                <div class="flex-vietboi">
+                    <img class="anh-dai-dien"
+                        src="https://img-global.cpcdn.com/users/737bdf9adfe1558c/98x98cq50/avatar.webp"
+                        alt="User profile picture" width="80px" height="80px" class="comment-avatar">
+                    <div class="thong-tin-nguoi-dang">
+                        <h5>Rose Truong <span style="color: #939290;">@hh_yeu_bep</span></h5>
+                        <p class="thoi-gian" style="margin:0px">vào 24 tháng 6 năm 2023<br><i
+                                class="fa-solid fa-location-dot"></i> Nha Trang
+                        </p>
+                        <button class="btn-cooksnap" style="margin-top: 10px;">Kết Ban Bếp</button>
+                    </div>
+                </div>
+                <div class="author-description">
+                    <p>“ Nếu bạn may mắn có ông bà hay ba mẹ là những người thích nấu nướng, tôi tin rằng mùi bánh mới
+                        nướng sẽ là một trong những hương vị tuyệt vời nhất đọng lại trong kí ức tuổi thơ của bạn “ Mình
+                        tên thật là Anh Thư - có sở thích bánh trái, nấu nướng và đi du lịch😍💖</p>
+                </div>
+            </div>
+
+            <div class="monkhac">
+                <div class="border-tieu-de-mon-khac">
+                    <h2 style="margin-top: 0px;">Các món khác từ tác giả</h2>
+                    <a href=""><i class="fa fa-arrow-right" style="padding-right: 10px;"></i></a>
+                </div>
+                <div class="flex-monkhac">
+                    <div class="monkhac1">
+                        <a class="a-anh" href=""><img class="img1"
+                                src="https://img-global.cpcdn.com/recipes/90f33883eae8406a/152x152cq70/photo.webp"
+                                alt=""></a>
+                        <a href="">
+                            <h3>Bún óc đậu</h3>
+                        </a>
+                    </div>
+                    <div class="monkhac1">
+                        <a class="a-anh" href=""><img class="img1"
+                                src="https://img-global.cpcdn.com/recipes/64a4bac2c495b7e0/152x152cq70/photo.webp"
+                                alt=""></a>
+                        <a href="">
+                            <h3>Canh rau cải nấu thịt heo</h3>
+                        </a>
+                    </div>
+                    <div class="monkhac1">
+                        <a class="a-anh" href=""><img class="img1"
+                                src="https://img-global.cpcdn.com/recipes/44e0ce0e35a9aae3/152x152cq70/photo.webp"
+                                alt=""></a>
+                        <a href="">
+                            <h3>Miến rong nấu măng tươi</h3>
+                        </a>
+                    </div>
+                    <div class="monkhac1">
+                        <a class="a-anh" href=""><img class="img1"
+                                src="https://img-global.cpcdn.com/recipes/b12c4c76720dbcf9/152x152cq70/photo.webp"
+                                alt=""></a>
+                        <a href="">
+                            <h3>Ốc xào sả</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe-actions">
+            <div class="savemon"><button id="saveButton" style="padding: 5px;font-size: 20px;"><i
+                        class="fa fa-bookmark"></i> Lưu món</button>
+            </div>
+            <div class="shear">
+                <button id="shareButton" style="padding: 5px;font-size: 20px;">Chia sẻ</button>
+            </div>
+            <div class="sub-menu-shear">
+                <ul>
+                    <li class="smns"><a style="font-size: 17px;" href="https://accounts.google.com/ServiceLogin?hl=vi"
+                            target="_blank"><i class="fa fa-envelope"></i> Email</a></li>
+                    <li class="smns"><a style="font-size: 17px;" href="https://www.facebook.com/?locale=vi_VN"
+                            target="_blank">
+                            <i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li class="smns"><a style="font-size: 17px;" href="https://www.pinterest.com/" target="_blank">
+                            <i class="fa-brands fa-pinterest"></i> Đánh dấu</a></li>
+                    <li><a style="font-size: 17px;" href="https://twitter.com/?lang=vi" target="_blank"><i
+                                class="fa-brands fa-twitter"></i>Twitter</a></li>
+
+                </ul>
+            </div>
+            <div class="print">
+                <button id="printButton" style="padding: 5px;font-size: 20px;">In</button>
+            </div>
+            <div class="button-container">
+                <button class="cooksnap-button" style="padding: 5px;font-size: 20px;">Gửi Cooksnap</button>
+                <input type="file" id="imageInput" style="display: none;">
+                <div class="more-options"><i class="fa-solid fa-ellipsis"></i></div>
+                <div id="reportText"><a class="reportText" href="">Báo cáo món này</a></div>
+            </div>
+
+            <div class="timhieuthem">
+                <a href="" style="font-size: 15px;" id="">Tìm hiểu thêm về Cooksnap!</a>
+            </div>
+        </div>
+
+    </main>
+    <footer class="flex center"></footer>
+    <script src="https://kit.fontawesome.com/cbae906f24.js" crossorigin="anonymous"></script>
+    <script src="../js/loadHeaderFooter.js"></script>
+    <script src="../js/loadedHFter.js"></script>
+    <script type="text/javascript" src="../js/suggest.js"></script>
+</body>
+
+
+</html>

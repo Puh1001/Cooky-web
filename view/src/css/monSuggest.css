@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', 'Roboto', sans-serif, monospace;
+}
+
+body {
+    background-color: #f8f6f2;
+}
+.wrapper {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0px auto;
+    display: flex;
+}
+
+p {
+    color: #939290;
+}
+
+.suggest > a {
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+    margin: 0px;
+}
+
+.suggest > ul {
+    list-style: none;
+}
+
+.suggest > li {
+    padding: 5px;
+}
+
+.smns {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding-right: 25px;
+}
+
+.sub-menu-shear ul {
+    position: absolute;
+    top: 95px;
+    right: 25px;
+    display: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+.minhhoa {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex {
+    display: flex;
+}
+
+.recipe-actions {
+    position: sticky;
+    top: 10px;
+    margin-left: 5vw;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 330px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.shear {
+    width: 280px;
+    border: 1px solid #cececd;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.savemon {
+    width: 280px;
+    border: 1px solid #cececd;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.print {
+    width: 280px;
+    border: 1px solid #cececd;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cooksnap-button {
+    width: 240px;
+    border: 1px solid #cececd;
+    border-radius: 10px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.more-options {
+    border: 1px solid #cececd;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.reportText {
+    font-size: 17px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: white;
+    padding: 5px;
+    padding-right: 15px;
+    position: absolute;
+    bottom: 8px;
+    right: 25px;
+    display: none;
+}
+
+.timhieuthem {
+    width: 181px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+
+.khungtrong {
+    width: 680px;
+    margin-bottom: 20px;
+}
+
+.img-1 {
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 690px;
+    height: 480px;
+}
+
+.tenmon {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.tieude {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.margin-0 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nguyenlieu {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.nguyen-lieu-can-dung {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1)
+}
+
+.nguyenlieu ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.nguyenlieu li {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+h3,
+h4,
+h5 {
+    margin: 0px;
+}
+
+.congthuc {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.img-cong-thuc {
+    border-radius: 10px;
+    margin-right: 6px;
+}
+
+.phanung {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.cooksnap {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn-cooksnap {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 15px;
+}
+
+.learn-more {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+
+.comment {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.comments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pu {
+    padding: 5px;
+    margin-top: 0px;
+}
+
+.like {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #cececd;
+    display: flex;
+    justify-content: center;
+    padding: 0px 5px 0px 5px;
+    margin-right: 5px;
+}
+
+#likeButton,
+#timButton,
+#votayButton {
+    padding: 0px;
+}
+
+.icon {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.ten-nguoi-icon {
+    margin: 0px;
+    color: #939290;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.comment,
+#commentInput,
+#commentButton {
+    border: none !important;
+    outline: none;
+    box-shadow: none !important;
+}
+
+
+.khung-comment {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.time-comment {
+    margin: 0px;
+}
+
+.vietboi {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.flex-vietboi {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.thong-tin-nguoi-dang {
+    margin: 0px;
+    font-size: 15px;
+}
+
+
+.dis-flex {
+    display: flex;
+}
+
+.monkhac {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    width: 670px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.border-tieu-de-mon-khac {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.monkhac1 {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.img1 {
+    width: 150px;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+.flex-monkhac {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+.a-anh {
+    padding: 0px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.can-giua-ten {
+    display: flex;
+    align-items: center;
+    z-index: 998;
+}
+
+.anh-dai-dien {
+    border-radius: 50%;
+    margin-right: 10px;
+    z-index: 998;
+}
+
+.khungtrong {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .khung-comment,
+    .recipe-actions,
+    .shear,
+    .savemon,
+    .print,
+    .vietboi,
+    .monkhac {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+
+    .khung-comment,
+    .vietboi,
+    .monkhac {
+        width: 80%;
+    }
+}

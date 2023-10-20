@@ -4,28 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooky - Nấu ăn vui vẻ mỗi ngày!</title>
-    <link rel="shortcut icon" type="x-icon" href="../../../icons/PuhChef_ba-style@nulla.top.png">    <link rel="stylesheet" href="mon.css">
+    <link rel="shortcut icon" type="x-icon" href="../../../icons/PuhChef_ba-style@nulla.top.png">
+    <link rel="stylesheet" href="../css/mon.css">
+    <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <header></header>
+    <main>
     <div>
-        <div class="monk1">
-            <div class="monk2">
-                <img src="logo_circle-d106f02123de882fffdd2c06593eb2fd33f0ddf20418dd75ed72225bdb0e0ff7.png" class="img1">
-                <img src="../../../icons/PuhChef_ba-style@nulla.top.png" class="img1">
-            </div>
-            <div class="monk2">
-                <a href="#" class="lensong"><div>Lên sóng</div></a>
-                <a href="#" class="cham3"><i class="fa-solid fa-ellipsis"></i></a>
-            </div>
-
-        </div>
         <div class="monk3">
             <label for="fileInput">
                 <div class="monk31" id="uploadArea">
                     <input type="file" id="fileInput" style="display: none;" accept="image/*">
-                    <img src="Screenshot 2023-10-10 155909.png" class="img2">
+                    <img src="../../../img/cuong/Screenshot 2023-10-10 155909.png" class="img2">
                     <h2 class="h1">Bạn đã đăng món mình nấu ở đây chưa?</h2>
                     <p class="p1">Chia sẻ với mọi người thành phần nấu nướng của bạn nào!</p>
                 </div>
@@ -79,6 +72,11 @@
 
         </div>
     </div>
+    </main>
+    <footer class="flex center"></footer>
+    <script src="https://kit.fontawesome.com/cbae906f24.js" crossorigin="anonymous"></script>
+    <script src="../js/loadHeaderFooter.js"></script>
+    <script src="../js/loadedHFter.js"></script>
     <script>
         document.getElementById('fileInput').addEventListener('change', function (event) {
             const selectedFile = event.target.files[0];
