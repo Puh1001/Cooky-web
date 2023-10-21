@@ -1,16 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', 'Roboto', sans-serif, monospace;
+}
 .post {
-    display: flex;
-    flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: white;
 }
 
-ul {
+.post > ul {
     padding-left: 0;
     margin-left: 0;
     list-style-position: inside;
 }
-
+.video-container {
+    display: flex;
+    justify-content: center;
+}
 
 .ten-nguoi-icon {
     margin: 0px;
