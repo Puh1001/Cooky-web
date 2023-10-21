@@ -1,19 +1,65 @@
+/* Add css by puh */
+.flex {
+    display: flex;
+}
+.center {
+    justify-content: center;
+}
+.t-center{
+    justify-content: center;
+    align-items: center;
+}
+.py-search-xs {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.px-search-rg {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.mg-px-search-rg {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
 
+.mg-py-search-xs {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.mg-center {
+    margin: 0 auto;
+}
+.pd-center {
+    padding: 0 auto;
+}
+.no-background {
+    background: none;
+}
+.space-bw {
+    justify-content: space-between;
+}
+.border {
+    border: 1px-search solid black;
+}
+.round-full {
+    border-radius: 9999px;
+}
 ul {
     list-style: none;
 }
 li {
     display: flex;
-    align-items: center;    
-}   
-li>a {
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+li > a {
     padding-right: 1rem;
     padding-left: 1rem;
 }
-
-li>a>p {
+li > a > p {
     margin-bottom: -.6rem;
     padding-left: .5rem;
 }
