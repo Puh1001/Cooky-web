@@ -2,13 +2,19 @@
   "name": "cooky-web",
   "version": "1.0.0",
   "description": "Cookyweb",
-  "main": "dangkidangnhap.js",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon --inspect app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "puh",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
     "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
   }
 }
