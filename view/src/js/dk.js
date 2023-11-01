@@ -8,7 +8,9 @@ const confirmPasswordInput = document.getElementById("confirmPassword");
 const signUpButton = document.getElementById("ttk");
 
 // Thêm sự kiện click cho nút đăng ký
-signUpButton.addEventListener("click", function() {
+signUpButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  
   // Lấy giá trị từ các trường nhập liệu
   const name = nameInput.value;
   const email = emailInput.value;
@@ -22,8 +24,9 @@ signUpButton.addEventListener("click", function() {
   }
 
   // Đăng ký người dùng mới với email và mật khẩu
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+  createUserWithEmailAndPassword(auth ,email, password)
     .then((userCredential) => {
+      console.log(userCredential)
       // Người dùng đã đăng ký thành công
       const user = userCredential.user;
 

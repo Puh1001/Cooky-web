@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +9,117 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="shortcut icon" type="x-icon" href="../../../icons/PuhChef_ba-style@nulla.top.png">
-    <style>
-    </style>
 </head>
+
 <body class="backgroundtong">
 
-<div class="login-container">
-    <div class="login-canngang">
-        <div><a href="/dkdn" class="mau"><i class="fa-solid fa-arrow-right fa-rotate-180"></i></a></div>
-        <div><a href="#" class="mau">Việt Nam <span><i class="fa-solid fa-angle-up fa-rotate-180"></i></span></a></div>
-        <div><a href="#" class="mau"><i class="fa-solid fa-xmark"></i></a></div>
+    <div class="login-container">
+        <div class="login-canngang">
+            <div><a href="/dkdn" class="mau"><i class="fa-solid fa-arrow-right fa-rotate-180"></i></a></div>
+            <div><a href="#" class="mau">Việt Nam <span><i class="fa-solid fa-angle-up fa-rotate-180"></i></span></a>
+            </div>
+            <div><a href="#" class="mau"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <h1>Đăng ký bằng email</h1>
+        <p>Vui lòng thêm tên, email, và mật khẩu cảu bạn</p>
+        <form id="signup-form">
+            <div class="border1">
+                <div class="border">
+                    <i class="fa-solid fa-circle-user textaracan"></i>
+                    <input type="text" id="name" placeholder="Tên bạn (hiển thị công khai)" required />
+                </div>
+                <div class="border">
+                    <i class="fa-regular fa-envelope textaracan" style="color: #000000;"></i>
+                    <input type="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="border">
+                    <i class="fa-solid fa-lock textaracan"></i>
+                    <input type="password" id="password" placeholder="Mật khẩu" required />
+                </div>
+                <div class="border">
+                    <i class="fa-solid fa-lock textaracan"></i>
+                    <input type="password" id="confirmPassword" placeholder="xác nhận mật khẩu" required />
+                </div>
+            </div>
+            <div class="login-canngang2">
+                <input type="checkbox" id="example1" name="example1">
+                <p class="check">Tôi đồng ý nhận các bản tin về gợi ý món ngon, cách làm hay và những thông tin khác từ
+                    Cookpad.</p>
+            </div><br>
+            <button id='ttk' type='submit' class="ttk">Tạo tài khoản</button><br><br><br>
+            <p class='check'>Khi sử dụng Cookpad, bạn đồng ý với
+                <span><a href='#' class='check'>Điều Khoản Dịch Vụ</a></span> &
+                <span><a href='#' class='check'>Chính Sách Bảo Mật</a></span> của chúng tôi
+            </p>
+        </form>
     </div>
-    <h1>Đăng ký bằng email</h1>
-    <p>Vui lòng thêm tên, email, và mật khẩu cảu bạn</p>
-    <div class="border1">
-        <div class="border">
-            <i class="fa-solid fa-circle-user textaracan"></i>
-            <textarea id="name" placeholder="Tên bạn (hiển thị công khai)" rows="4" cols="50"></textarea>
-        </div>
-        <div class="border">
-            <i class="fa-regular fa-envelope textaracan" style="color: #000000;"></i>
-            <textarea id="email" placeholder="Email" rows="4" cols="50"></textarea>
-        </div>
-        <div class="border">
-            <i class="fa-solid fa-lock textaracan"></i>
-            <textarea id="password" placeholder="Mật khẩu" rows="4" cols="50"></textarea>
-        </div>
-        <div class="border">
-            <i class="fa-solid fa-lock textaracan"></i>
-            <textarea id="confirmPassword" placeholder="xác nhận mật khẩu" rows="4" cols="50"></textarea>
-        </div>
-    </div>
-    <div class="login-canngang2">
-        <input type="checkbox" id="example1" name="example1">
-        <p class="check">Tôi đồng ý nhận các bản tin về gợi ý món ngon, cách làm hay và những thông tin khác từ Cookpad.</p>
-    </div><br>
-    <a href="#" class="ttk">Tạo tài khoản</a><br><br><br>
-    <p class="check">Khi sử dụng Cookpad, bạn đồng ý với <span><a href="#" class="check">Điều Khoản Dịch Vụ</a></span> & <span><a href="#" class="check">Chính Sách Bảo Mật</a></span> của chúng tôi</p>
-</div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAQESMzAudVYpfgLg-MMK2o6f0pr_K0hLI",
+            authDomain: "cooky-bacb5.firebaseapp.com",
+            projectId: "cooky-bacb5",
+            storageBucket: "cooky-bacb5.appspot.com",
+            messagingSenderId: "244852787410",
+            appId: "1:244852787410:web:4e042f7132a0604eac450b",
+            measurementId: "G-LPJSXCCZ6P"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+        const auth = getAuth(app);
+
+        // Lấy các trường nhập liệu từ trang HTML
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+
+        // Lấy nút đăng ký từ trang HTML
+        const signUpButton = document.getElementById("ttk");
+
+        // Thêm sự kiện click cho nút đăng ký
+        signUpButton.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Lấy giá trị từ các trường nhập liệu
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            // Kiểm tra xem mật khẩu và mật khẩu xác nhận có khớp nhau không
+            if (password !== confirmPassword) {
+                alert("Mật khẩu và mật khẩu xác nhận không khớp!");
+                return;
+            }
+
+            // Đăng ký người dùng mới với email và mật khẩu
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    console.log(userCredential)
+                    alert("Bạn đã đăng ký thành công!!!")
+                })
+                .catch((error) => {
+                    // Xử lý lỗi đăng ký
+                    console.error(error);
+                    alert("Có lỗi xảy ra khi đăng ký!");
+                });
+        });
+    </script>
 
 </body>
-<script src="../config/firebase.js"></script>
-<script src="../js/dk.js"></script>
+
 </html>
