@@ -5,10 +5,26 @@ const userRouter = require('./user.route')
 const searchRouter = require('./search.route')
 const addNewFoodRouter = require('./addNewFood.route')
 const interactRouter = require('./interact.route')
+const dnRouter = require('./dn.route')
+const dkdnRouter = require('./dkdn.route')
+const dkRouter = require('./dk.route')
+const quenmkRouter = require('./quenmk.route')
+
 
 function route(app) {
 
+    app.get('/addNewFood/vietmonthamgia', addNewFoodRouter)
+    app.get('/addnewFood/thuthach1', addNewFoodRouter)
+    app.get('/addnewFood/ten1', addNewFoodRouter)
+    app.get('/addnewFood/ten2', addNewFoodRouter)
+    app.get('/addnewFood/biquyet', addNewFoodRouter)
+    app.get('/addnewFood/mon', addNewFoodRouter)
     app.get('/addnewFood', addNewFoodRouter)
+
+    app.get('/quenmk', quenmkRouter)
+    app.get('/dn', dnRouter)
+    app.get('/dk', dkRouter)
+    app.get('/dkdn', dkdnRouter)
     app.get('/interact', interactRouter)
     app.get('/search', searchRouter)
     app.get('/user', userRouter)

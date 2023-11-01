@@ -39,6 +39,31 @@ class SiteController {
         res.sendFile(path.join(__dirname,'..','..','view','src','html','interact.html'));
 
     }
+
+    dkdn(req,res){
+
+        res.sendFile(path.join(__dirname,'..','..','view','src','html','dkdn.html'));
+
+    }
+
+    dk(req,res){
+
+        res.sendFile(path.join(__dirname,'..','..','view','src','html','dk.html'));
+
+    }
+
+    dn(req,res){
+
+        res.sendFile(path.join(__dirname,'..','..','view','src','html','dn.html'));
+
+    }
+
+    quenmk(req,res){
+
+        res.sendFile(path.join(__dirname,'..','..','view','src','html','quenmk.html'));
+
+    }
+
 }
 
 module.exports = new SiteController;
