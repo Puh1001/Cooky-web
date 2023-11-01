@@ -3,6 +3,6 @@ const router = express.Router();
 
 const siteController = require('../app/controllers/SiteController')
 
-router.get('/user', siteController.user);
+router.get('/interact', siteController.interact);
 
 module.exports = router;

@@ -16,15 +16,27 @@ class SiteController {
 
     }
 
-    suggest(req,res){
-
-        res.sendFile(path.join(__dirname,'..','..','view','src','html','suggest.html'));
-
-    }
-
     user(req,res){
 
         res.sendFile(path.join(__dirname,'..','..','view','src','html','user.html'));
+
+    }
+
+    search(req,res){
+
+        res.sendFile(path.join(__dirname,'..','..','view','src','html','search.html'));
+
+    }
+
+    addNewFood(req,res){
+
+        res.sendFile(path.join(__dirname,'..','..','view','src','html','addNewFood.html'));
+
+    }
+
+    interact(req,res){
+
+        res.sendFile(path.join(__dirname,'..','..','view','src','html','interact.html'));
 
     }
 }
