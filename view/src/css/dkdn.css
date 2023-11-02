@@ -124,6 +124,8 @@ h1{
     background-color: rgb(131, 85, 25);
 }
 
-
+.border > input {
+    width: 20vw;
+}
 
 

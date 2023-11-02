@@ -83,6 +83,7 @@
             .then((userCredential) => {
                 console.log(userCredential)
                 alert("Bạn đã đăng nhập thành công!!!")
+                window.location.href = '/';
             })
             .catch((error) => {
                 // Xử lý lỗi đăng ký
