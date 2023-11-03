@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +12,82 @@
     <style>
     </style>
 </head>
+
 <body class="backgroundtong">
 
-<div class="login-container">
-    <div class="login-canngang">
-        <div><a href="dkdn.html" class="mau"><i class="fa-solid fa-arrow-right fa-rotate-180"></i></a></div>
-        <div><a href="#" class="mau">Việt Nam <span><i class="fa-solid fa-angle-up fa-rotate-180"></i></span></a></div>
-        <div><a href="#" class="mau"><i class="fa-solid fa-xmark"></i></a></div>
-    </div>
-    <h1>Quên mật khẩu?</h1>
-    <p>Vui lòng nhập địa chỉ email, rồi tôi sẽ gửi bạn đường link để cài mật khẩu mới nhé.</p>
-    <div class="border1">
-        <div class="border">
-            <i class="fa-regular fa-envelope textaracan" style="color: #000000;"></i>
-            <textarea id="dkInput" placeholder="Email" rows="4" cols="50"></textarea>
+    <div class="login-container">
+        <div class="login-canngang">
+            <div><a href="dkdn.html" class="mau"><i class="fa-solid fa-arrow-right fa-rotate-180"></i></a></div>
+            <div><a href="#" class="mau">Việt Nam <span><i class="fa-solid fa-angle-up fa-rotate-180"></i></span></a>
+            </div>
+            <div><a href="#" class="mau"><i class="fa-solid fa-xmark"></i></a></div>
         </div>
+        <h1>Quên mật khẩu?</h1>
+        <p>Vui lòng nhập địa chỉ email, rồi tôi sẽ gửi bạn đường link để cài mật khẩu mới nhé.</p>
+        <div class="border1">
+            <div class="border">
+                <i class="fa-regular fa-envelope textaracan" style="color: #000000;"></i>
+                <input type="email" id="email" placeholder="Email" required />
+            </div>
+        </div>
+        <br>
+        <a href="#" class="ttk" id="forgotPassword">Gửi</a><br><br><br>
+        <p class="check">Khi sử dụng Cookpad, bạn đồng ý với <span><a href="#" class="check">Điều Khoản Dịch
+                    Vụ</a></span> & <span><a href="#" class="check">Chính Sách Bảo Mật</a></span> của chúng tôi</p>
     </div>
-    <br>
-    <a href="#" class="ttk">Gửi</a><br><br><br>
-    <p class="check">Khi sử dụng Cookpad, bạn đồng ý với <span><a href="#" class="check">Điều Khoản Dịch Vụ</a></span> & <span><a href="#" class="check">Chính Sách Bảo Mật</a></span> của chúng tôi</p>
-</div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        import { getDatabase, get, ref, child } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAQESMzAudVYpfgLg-MMK2o6f0pr_K0hLI",
+            authDomain: "cooky-bacb5.firebaseapp.com",
+            projectId: "cooky-bacb5",
+            storageBucket: "cooky-bacb5.appspot.com",
+            messagingSenderId: "244852787410",
+            appId: "1:244852787410:web:4e042f7132a0604eac450b",
+            measurementId: "G-LPJSXCCZ6P"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+        const auth = getAuth(app);
+        const dbref = ref(db);
+
+        // Lấy các trường nhập liệu từ trang HTML
+        const emailInput = document.getElementById("email");
+        const forgotPassword = document.getElementById("forgotPassword");
+
+        // Thêm sự kiện click cho nút đăng ký
+        forgotPassword.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Lấy giá trị từ các trường nhập liệu
+            const email = emailInput.value;
+
+            // Đăng ký người dùng mới với email và mật khẩu
+            sendPasswordResetEmail(auth, email)
+                .then((userCredential) => {
+                    console.log(userCredential)
+                    alert("Link reset mật khẩu đã được gửi về email của bạn")
+                })
+                .catch((error) => {
+                    // Xử lý lỗi đăng ký
+                    console.error(error);
+                    alert("Có vẻ đã có lỗi xảy ra !!! Hãy liên hệ chúng tôi nhé (❁´◡`❁)");
+                });
+        });
+    </script>
 </body>
+
 </html>
